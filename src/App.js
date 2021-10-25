@@ -101,8 +101,8 @@ const Board = (props) => {
       <DisplayPlayer player={players[boardState.player]} />
       <br/>      
       {
-        rowIndexes.map(i => { return [<BoardRow key={i} i={i} row={boardState.board.getRow(i)} onEntryClick={handleEntryClick} 
-                                                disabled={boardState.wonGame}/>,<br/>]})
+        rowIndexes.map(i => { return <BoardRow key={i} i={i} row={boardState.board.getRow(i)} onEntryClick={handleEntryClick} 
+                                                disabled={boardState.wonGame}/>})
       }
       <DisplayWon wonGame={boardState.wonGame} player={players[boardState.player]} restartClick={props.restartClick}/> 
       <br/><br/>
