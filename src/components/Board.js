@@ -86,19 +86,19 @@ const Board = (props) => {
     const rowIndexes = [...Array(props.size).keys()]
     const currentState = boardState.history[boardState.history.length - 1]
     return (
-        <React.Fragment>
-            <DisplayPlayer player={players[currentState.player]} />
-            <br />
-            {
-                rowIndexes.map(i => {
-                    return <BoardRow key={i} i={i} row={currentState.board.getRow(i)} onEntryClick={handleEntryClick}
-                        disabled={currentState.wonGame} />
-                })
-            }
-            <DisplayWon wonGame={currentState.wonGame} player={players[currentState.player]} restartClick={props.restartClick} />
-            <br /><br />
-            <DisplayStepList step={currentState.step} stepClick={handleStepClick} />
-        </React.Fragment>
+        <div className="game">
+            <DisplayPlayer player={players[currentState.player]} />            
+            <div className="board">
+                {
+                    rowIndexes.map(i => {
+                        return <BoardRow key={i} i={i} row={currentState.board.getRow(i)} onEntryClick={handleEntryClick}
+                            disabled={currentState.wonGame} />
+                    })
+                }
+            </div>
+            <DisplayWon wonGame={currentState.wonGame} player={players[currentState.player]} restartClick={props.restartClick} />            
+            <DisplayStepList step={currentState.step} stepClick={handleStepClick} />            
+        </div>
     )
 }
 

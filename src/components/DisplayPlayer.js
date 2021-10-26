@@ -1,6 +1,8 @@
 const DisplayPlayer = (props) => {
     return (
-      <label>Current player: {props.player}</label>
+      <div className="displayPlayer">
+        <label>Current player: {props.player}</label>
+      </div>
     )
   }
 

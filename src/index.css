@@ -1,0 +1,23 @@
+.game {
+    margin:auto;
+    width: 25%;
+}
+
+.board {
+}
+
+.board button {
+    border: 1px solid black;
+    background: none;
+    width: 25px;
+    height: 25px;
+    vertical-align: top;
+}
+
+.displayPlayer {
+    display: inline;
+}
+
+.displayStepList {
+    float: left;
+}
